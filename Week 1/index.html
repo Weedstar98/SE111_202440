@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <meta name="author" content="Kenneth Weed">
+    <meta name="description" content="Week 1 Demo">
+
+</head>
+<body>
+    <!--the body holds ALL CONTENT for the page-->
+    <!--this is a comment in HTML-->
+
+    <!--heading tags are Block Level Elements (BLEs)-->
+    <!--BLES create structure for page - they are literal blocks/rectanglges;
+    start on a new left hand aligned line-->
+
+    <h1>Heading 1</h1> <!--ONE h1 per page; content supports SEO-->
+    <h2 style="border:1px solid red";>Heading 2</h2>
+    <h3 style="border:1px solid green";>Heading 3</h3>
+    <h4 style="border:1px solid orange";>Heading 4</h4>
+    <h5 style="border:1px solid yellow";>Heading 5</h5>
+    <h6 style="border:1px solid blue";>Heading 6</h6>
+    
+
+    <!--horizontal rule - self-closing; spits out a BLE line-->
+    <hr>
+
+    <!--LISTS! we have ordered (numbered) and unordered (bullet)-->
+    <!--list require: a type of list and LIST items-->
+
+    <h2>Favorite Dragons</h2>
+    <ol><!--ordered list type-->
+        <li>Drogon</li>
+        <li>Syrax</li>
+        <li>Moondance</li>
+        <li>Vermithor</li>
+        <li>Cannibal</li>
+    </ol>
+
+    <h2>My Hobbies</h2>
+
+    <ul><!--unordered list type-->
+        <li>Gaming</li>
+        <li>Reading</li>
+        <li>Working</li>
+    </ul>
+    <hr>
+
+    <h2> Paragraph Tags - for body text content</h2>
+
+    <p>Hello world,adffffffffffffffffdfadfafafkjdjfkjakfjlkadjflajf;lkajflkdajfkladjfklajflkajfklajflakjflakjfaklfjkldajflkajfl
+        
+        <br> <!-- break space, creates a new line-->
+        dog cat bird armadillo
+    </p>
+    <hr>
+
+    <h2> Divs - divs (divisions/dividers) create sections of content; they ONLY hold *other HTML elements* (never text content on its own)
+    </h2>
+
+    <div style="border:1px solid black;background-color:blue;font-family: Helvetica; color: white;"">
+        <h4> About Me</h4>
+
+        <p>Hi, my name is what? My name is who?</p>
+    </div>
+
+    <!--IMAGES! Images are considered BOTH inline and block level XD-->
+    <!--we will primarily use them as BLEs-->
+    <!--Image tag is self-closing-->
+
+    <img src="https://images6.alphacoders.com/131/1317584.jpeg" 
+    alt="Vaporwave guy background" width="500">
+   
+    <!--above is an example of an ABSOLUTE image path [boooooooo] if the image on the other site is changed, so is this link-->
+
+    <!-- relative file paths are BEST! these live directly within the root folder-->
+    <img src="Images/Vaporwave background 5.jpg" alt="Vaporwave Background" width="500">
+
+    <!--IMG requires 2 attributes: 
+    *src > file path to image
+    *alt > alternative text; what is read on screenreaders, supports SEO, and appears if file path is broken--> 
+
+    <hr>
+
+    <h2>Hypertext Links</h2>
+
+    <p>Hypertext links give us access to <a href="https://www.neit.edu"> a>/a> they are known as the <i>anchor</i> tag.
+    </p>
+
+
+
+
+
+
+
+
+</body>
+</html>
