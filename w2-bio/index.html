@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kenneth Weed" >
+    <meta name="description" content="w2-bio" >
+
+    <!-- Kenneth Weed, SE111, Date: 2024-07-29 -->
+    
+    <title>W2 | Bio</title>
+
+    <!--in-document syling; loads in head so styles apply as the content loads-->
+    <!--Handle many selections of element styles as opposed to one at a time-->
+
+    <style>
+        /*in here we write CSS*/   
+        /*Selection in CSS & JS: select scepific element(s) on a page
+
+            *by Element type            ex: body, div, p
+            *by ID attribute            ex: #wrapper, #nav, #footer etc
+
+        */
+        
+        div{
+            border:1px solid black;
+            padding: 10px; /*adds space between content and border*/
+            margin:10px; /*adds space between an elements border and other elements*/
+
+
+            background-color: rgb(151, 94, 60);
+        }
+
+        #wrapper {
+            background-color: black;
+            color: white    ;
+        }
+
+        #nav a {
+            color:white;
+        }
+
+
+    </style>
+</head>
+<body style="background-color: rgb(244, 233, 203);">
+
+    
+    <!-- all page content goes in the body-->
+
+    <!--WRAPPER: the wrapper literally "wraps" around all the content on the page-->
+    <div id="wrapper">
+
+        <h1 id="header" style="color: rgb(115, 158, 158); text-align: center;"> <i>Kenny Weed - About Me</i> </h1>
+        
+        <!--navigation-->
+        <div id="nav">
+            
+            <!--ID names can only be used one time per page-->
+
+
+
+            <!--linking to internal pages (part of sire) you just use a relative path-->
+
+
+            <!--IN-PAGE links: linking to sections within the actual page itself-->
+            <a href="#bio">Bio</a><br>
+            <a href="#schools">Schools</a><br>
+            <a href="#hobbies">Hobbies</a><br>
+            <a href="https://www.neworleanssaints.com/" target="_blank">Who Dat Nation Represent</a><br>
+            <a href="#footer">Bottom of Page</a><br>
+        </div><!--/ nav-->
+
+
+
+        <!-- Bio section-->
+        <div id="bio">
+            <h2 style="text-align: center;">About Me</h2>
+            <p>Hello, my name is <b><i>Kenneth Weed</i></b>, and I was born on October 16th, 1998 in Grand Haven, MI. At a young age I moved to Griswold, CT and spent the rest of my childhood in
+            Griswold.  I graduated in <strong>2016</strong>, and shortly thereafter joined the Coast Guard. After my time in the military, I moved back to Griswold I bounced arond jobs until I met my fiance
+            at the end of 2019. I moved in to my apartment with my fiance less than <em>two weeks</em> before the onset of the Covid-19 pandemic. Once restricitions began to lessen around 2021,
+            I began school at CCRI and graduated in <strong>May of 2023</strong> with a general studies associate's degree. I briefly attended school at URI, before transferring into NEIT at the beginning 
+            of the 2024 Spring semester. I am currently enrolled for an associate's degree in Cybersecurity, and am on track to graduate by <u>summer 2025</u>, and greatly look forward 
+            to the rest of my time at NEIT. My goal once I graduate NEIT is for myself and my fiance to move up to Maine, preferably far north in a city such
+            as Augusta, or even further north close to the border.
+            </p>
+
+            <br>
+            <!--Relative img example-->
+            <img src="images/Me and Dee.jpg" alt="My fiance and I at a large Christmas light show in Eliot, ME" style="display: block; margin: auto;">
+
+        <hr>
+
+        </div><!--/ Bio-->
+        
+        <!--Schools Section-->
+         <div id="schools">
+            <h2 style="text-align: center;">Education</h2>     
+            <ol>
+                <li>CCRI</li>
+                <li>URI</li>
+                <li>NEIT</li>
+                <br>
+                <img src="images/New England Tech Logo.jpg" alt="New England Tech Logo"style="display: block; margin: auto;">
+            </ol>
+            
+
+         </div><!--/ Schools-->
+         <hr>
+
+
+         <!--hobbies Section-->
+         <div id="hobbies">
+
+            <h2 style="text-align: center;">My Hobbies</h2>
+
+            <ul>
+                <li>Reading</li>
+                <li>Gaming</li>
+                <li>Gym</li>
+                <li>Football</li>
+            </ul>
+
+            <img src="images/Elder Scrolls Logo.png" alt="Elder Scrolls Logo"  width="500">
+            
+         </div><!-- / Hobbies-->
+
+
+
+         <!--Footer Section-->
+         <div id="footer">
+            <a href="#wrapper">Back to Top</a><br>
+
+
+         </div><!--/ Footer -->
+
+    </div><!--WRAPPER-->
+</body>
+</html>
