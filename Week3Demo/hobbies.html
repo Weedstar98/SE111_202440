@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">`
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*in here write CSS*/
+
+        div {
+            /*ALL div elements on THIS page will take the following styling*/
+            border:1px solid black;
+            padding:10px; /*adds space between element and border*/
+            margin:10px; /*adds space between border of element and next element*/
+        }
+
+        #wrapper{
+            width: 980px;
+            margin:auto; /*must have a width set; centers element w / equal L and R space in page*/
+            background-color: beige;
+        }
+
+        #nav{
+            background-color:whitesmoke;
+        }
+
+        /* . notates a class */
+
+        .bg {
+            background-color:black;
+            color:white;
+        }
+
+        .fancy {
+            font-family:'Franklin Gotchic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body style="background-color: rgb(244, 233, 203);">
+
+    <div id="wrapper">
+
+        <div id = "header">
+
+            <h1> W3 | Multi Page Demo </h1>
+
+
+        </div>
+
+
+        <!--Navigation-->
+
+        <div id ="nav">
+
+            <div id = "buttons">
+
+                <a href="index.html">ABOUT</a>
+                <a href="schools.html">SCHOOLS</a>
+                <a href="hobbies.html">HOBBIES</a>
+
+            </div> <!--buttons end div-->
+
+
+        </div> <!--navigation end div-->
+
+
+        <div id = "content">
+
+            <h2 class ="fancy">This is the <b>Hobbies</b> page</h2>
+
+            <img src="images/boston.jpg" alt="The Last of Us characters in Boston" width="500">
+
+        </div> <!--contant end div-->
+
+
+        <div id="footer" class ="bg">
+
+            <a href="#header">Jump to Top!</a> <br>
+
+            <p class = "fancy">&copy; Kenneth Weed | SE111| 202440</p>
+
+
+        </div> <!--footer end div-->
+
+
+
+
+
+    </div> <!--Wrapper End Div-->
+
+    
+</body>
+</html>
