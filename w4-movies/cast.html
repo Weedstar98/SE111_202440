@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <meta name="author" content="Kenneth Weed">
+    <meta name = "description" content="W4 | Review Demo">
+
+    <title>Fellowship of the Ring | W4</title>
+
+    <style> 
+
+        div {
+            /*ALL div elements on THIS page will take the following styling*/
+            border: 1px solid black;
+            padding: 10px; /*adds space between element and border*/
+            margin: 10px; /*adds space between border of element and next element*/
+        }
+        
+        #container {
+            width: 980px;
+            margin: auto; /*must have a width set; centers element w / equal L and R space in page*/
+            background-color: rgb(0, 147, 220);
+        }
+
+        #buttons {
+            border:none;
+            padding:none;
+            margin:none;
+            width: 535px;
+            /*to use margin-auto, you must first set a width*/
+            margin:auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            /*match line-height to height to center vertically*/
+            line-height: 50px;
+            font-size: 24px;
+            float: left;
+            margin-right: 25px;
+            text-decoration: none;
+        }
+
+        .btn:hover{
+            background-color:#f5f5dc44;
+            color: rgb(238, 135, 0);
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+     <!--#Container-->
+
+     <div id="container">
+
+        <hr>
+
+        <!--#Header-->
+        <div id ="header">
+            
+            <h1 style="text-align: center;"><em>The Lord of the Rings: Fellowship of the Ring</em></h1> <!--Use "em" whenever the movie title is mentioned-->
+            <h4 style="text-align: center;"><i>One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them</i></h4>
+
+        </div> <!--Header Div-->
+
+
+        <!--#NAV-->
+        <div id="nav">
+
+            <div id = buttons>
+                <a href="index.html" class="btn">ABOUT</a>
+                <a href="cast.html" class="btn">CAST</a>
+                <a href="review.html" class="btn">REVIEW</a> <!--Class names are REUSABLE-->
+            </div> <!--Buttons div-->
+
+            <div class="clear" style="clear:both; border:none; padding:none; margin:none;"></div> 
+
+        </div> <!--Nav Div-->
+
+        <hr>
+
+        <!--#Content-->
+        <div id ="content">
+
+            <h2> The cast of <em>The Lord of the Rings: Fellowship of the Ring</em></h2>
+
+            <!--Reusable for EACH character, do this FIVE TIMES-->
+            <!--EACH character has their own class, MAKE SURE YOU COPY-->
+            
+            <div class = "character">
+                <h3>Frodo Baggins</h3>
+                
+                <img src="images/Frodo.jpg" alt="Elijah Wood playing Frodo Baggins" height="50"> <!--short height-->
+
+                <p>Elijah Wood</p>
+
+                
+    
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Samwise Gamgee</h3>
+                
+                <img src="images/Sam.jpg" alt="Samwise Gamgee played by Sean Astin" height="50"> <!--short height-->
+
+                <p>Sean Astin</p>
+    
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Peregrin (Pippin) Took</h3>
+                
+                <img src="images/Pippin.jpg" alt="Pippin played by Billy Boyd" height="50"> <!--short height-->
+
+                <p>Billy Boyd</p>
+
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Meriadoc (Merry) Brandybuck</h3>
+                
+                <img src="images/Merry.jpg" alt="Merry played by Dominic Monaghan " height="50"> <!--short height-->
+
+                <p>Dominic Monaghan </p>
+
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Aragorn</h3>
+                
+                <img src="images/Aragorn.png" alt="Aragorn played by Viggo Mortensen" height="50"> <!--short height-->
+
+                <p>Viggo Mortensen</p>
+            
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Legolas</h3>
+                
+                <img src="images/Legolas.jpg" alt="Legolas played by Orlando Bloom" height="50"> <!--short height-->
+
+                <p>Orlando Bloom</p>
+
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Gimli</h3>
+                
+                <img src="images/Gimli.jpg" alt="Gimli played by John Rhys-Davies" height="50"> <!--short height-->
+
+                <p>John Rhys-Davies</p>
+
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Boromir</h3>
+                
+                <img src="images/Boromir.jpg" alt="Boromir played by Sean Bean" height="50"> <!--short height-->
+
+                <p>Sean Bean</p>
+
+            </div> <!--character class end div-->
+            <hr>
+
+            <div class = "character">
+                <h3>Gandalf</h3>
+                
+                <img src="images/Gandalf.jpg" alt="Gandalf played by Ian McKellen" height="50"> <!--short height-->
+
+                <p>Ian McKellen </p>
+            </div> <!--character class end div-->
+            <hr>
+            
+
+        </div> <!--Content Div-->
+
+        
+        <hr>
+
+        <!--#Footer-->
+        <div id ="footer">
+
+            <a href="#header">Back to Top!</a> <!--Represents an id-->
+            <p>&copy; Kenneth Weed | SE111 | 202440</p>
+
+
+        <!--
+            VALIDATION SCREENSHOT FOR THIS PAGE BELOW
+            
+            <img src="images/index_valid.png" alt="w3c validation scrrenshot of this page's HTML code" style = "width:90%">
+        
+        -->
+
+        </div> <!--Footer DIv-->
+
+     </div> <!--Container -->
+
+
+
+
+
+
+    
+</body>
+</html>

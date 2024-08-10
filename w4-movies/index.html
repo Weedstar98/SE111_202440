@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <meta name="author" content="Kenneth Weed">
+    <meta name = "description" content="W4 | Review Demo">
+
+    <title>Fellowship of the Ring | W4</title>
+
+    <style> 
+
+        div {
+            /*ALL div elements on THIS page will take the following styling*/
+            border: 1px solid black;
+            padding: 10px; /*adds space between element and border*/
+            margin: 10px; /*adds space between border of element and next element*/
+        }
+
+        #container {
+            width: 980px;
+            margin: auto; /*must have a width set; centers element w / equal L and R space in page*/
+            background-color: rgb(0, 147, 220);
+        }
+
+        #buttons {
+            border:none;
+            padding:none;
+            margin:none;
+            width: 535px;
+            /*to use margin-auto, you must first set a width*/
+            margin:auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            /*match line-height to height to center vertically*/
+            line-height: 50px;
+            font-size: 24px;
+            float: left;
+            margin-right: 25px;
+            text-decoration: none;
+        }
+
+        .btn:hover{
+            background-color:#f5f5dc44;
+            color: rgb(238, 135, 0);
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+     <!--#Container-->
+
+     <div id="container">
+
+        <hr>
+
+        <!--#Header-->
+        <div id ="header">
+            
+            <h1 style="text-align: center;"><em>The Lord of the Rings: Fellowship of the Ring</em></h1> <!--Use "em" whenever the movie title is mentioned-->
+            <h4 style="text-align: center;"><i>One Ring to rule them all, One Ring to find them, One Ring to bring them all, and in the darkness bind them</i></h4>
+
+        </div> <!--Header Div-->
+
+
+        <!--#NAV-->
+        <div id="nav">
+
+            <div id = buttons>
+                <a href="index.html" class="btn">ABOUT</a>
+                <a href="cast.html" class="btn">CAST</a>
+                <a href="review.html" class="btn">REVIEW</a> <!--Class names are REUSABLE-->
+            </div> <!--Buttons div-->
+
+            <div class="clear" style="clear:both; border:none; padding:none; margin:none;"></div> 
+
+        </div> <!--Nav Div-->
+
+        <hr>
+
+        <!--#Content-->
+        <div id ="content">
+
+            <h2>ALL ABOUT <em>Lord of the Rings</em></h2>
+
+            <!--brief synopsis-->
+
+            <p>A 5 sentence synopsis of LOTR</p>
+
+            <img src="" alt="Offical Poster of Lord of the Rings" width="500">
+
+            <div class="info" style="border:none;">
+
+
+                <p><b>Release Date:</b> 2001</p> <!--One div for all credit information (release date, run time)-->
+                <!--add rest of credits below-->
+                
+            </div> <!--info div c-->
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/V75dMMIW2B4?si=MqMEQ5lH7SBbHvPW" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+
+
+
+        </div> <!--Content Div-->
+
+        
+        <hr>
+
+        <!--#Footer-->
+        <div id ="footer">
+
+            <a href="#header">Back to Top!</a> <!--Represents an id-->
+            <p>&copy; Kenneth Weed | SE111 | 202440</p>
+
+
+        <!--
+            VALIDATION SCREENSHOT FOR THIS PAGE BELOW
+            
+            <img src="images/index_valid.png" alt="w3c validation scrrenshot of this page's HTML code" style = "width:90%">
+        
+        -->
+
+        </div> <!--Footer DIv-->
+
+
+
+
+
+     </div> <!--Container -->
+
+
+
+
+
+
+    
+</body>
+</html>
