@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kenneth Weed">
+    <meta name="description" content="Pay Calculator">
+    <title>W6 | Pay Calculator</title>
+</head>
+<body>
+    <h1>Week 6 - Secondary Javascript Demo</h1>
+    <h3><i>Conditions & Functions</i></h3>
+
+    <!-- JavaScript code -->
+    <script>
+
+        var hourlyPay = prompt(`What is your hourly pay?`);
+        hourlyPay = Number(hourlyPay);
+
+        var hoursWorked = prompt(`How many hours did you work in this two week period?`)
+        hoursWorked = Number(hoursWorked);
+
+
+        function calculatePay(hoursWorked, hourlyPay) {
+        
+            var grossPay = hourlyPay * hoursWorked;
+            var incomeTax = .2
+            
+            var owedToUncleSam = grossPay * incomeTax
+            var netPay = grossPay - owedToUncleSam
+            
+
+            grossPay = grossPay.toFixed(2);
+            netPay = netPay.toFixed(2);
+            owedToUncleSam = owedToUncleSam.toFixed(2);
+
+            alert(`Gross Pay: ${grossPay}\n Uncle Sam's Share: ${owedToUncleSam}\n Net Pay: ${netPay}`)
+            console.log(`Gross Pay: ${grossPay}`)
+            console.log(`Uncle Sam's Share: ${owedToUncleSam}`)
+            console.log(`Net Pay: ${netPay}`)
+
+            
+        }
+
+        calculatePay(hoursWorked, hourlyPay)
+
+
+
+    </script>
+</body>
+</html>

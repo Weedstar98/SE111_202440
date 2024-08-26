@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="KT">
+    <meta name="description" content="W6 Demo - Second Intro to JS">
+    <title>W6 | Demo #2</title>
+</head>
+<body>
+    <h1>Week 6 - Secondary Javascript Demo</h1>
+    <h3><i>Conditions & Functions</i></h3>
+
+    <!-- JavaScript code -->
+    <script>
+        var pref = prompt(`Welcome to Good Burger, home of the good burger, may I take your order? \nType "yes" or "no"`);
+
+        function checkDining(_pref) {
+            if (_pref.toLowerCase() === `yes`) {
+                var dining = prompt(`Would you like to dine in or take out?\nType "in" or "out"`);
+                if (dining.toLowerCase() === `in`) {
+                    return dining.toLowerCase();
+                } else if (dining.toLowerCase() === `out`) {
+                    return dining.toLowerCase();
+                } else {
+                    return `bad`;
+                }
+            } else if (_pref.toLowerCase() === `no`) {
+                alert(`You have poor taste.`);
+                return 0;
+            } else {
+                alert(`UH OH! Invalid Entry!\nPlease reload and re-read directions :]`);
+                return `bad`;
+            }
+        }
+
+        var decision = checkDining(pref);
+        if (decision == 0) {
+            alert(`Okay, goodbye.`);
+        } else if (decision == `bad`) {
+            alert(`Please reload`);
+        } else {
+            alert(`Plz tell me your order...`);
+        }
+    </script>
+</body>
+</html>
