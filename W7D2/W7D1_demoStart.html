@@ -171,7 +171,7 @@
                 //test values in console
                 console.log(`YOUR AGE: ${age} humanyears; ${dog_age} dog years`)
 
-                info.innerHTL += `<p><b>YOUR AGE:</b> ${age} human years; <br><b>DOG YEARS:</b> ${dog_age} dog years </p>`
+                info.innerHTML += `<p><b>YOUR AGE:</b> ${age} human years; <br><b>DOG YEARS:</b> ${dog_age} dog years </p>`
 
                 //add dog_age to global body
                 body.innerHTML += `<br><p>You are ${dog_age} years old!<p>`
@@ -203,22 +203,7 @@
             //we use these when the function will not be reused outside of the event 
             button.addEventListener(`click`, function(event){
                 console.log(event)
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            })
 
 	</script>
 	
