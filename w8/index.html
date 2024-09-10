@@ -36,13 +36,16 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		
+		var firstName = document.getElementById(`first`)
+		var lastName = document.getElementById(`last`)
+		var submitButton = document.getElementById('button')
 
 		//Make an array to store the people
+		var peopleEntered = []
 		
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		submitButton.addEventListener(`click`, calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -67,51 +70,60 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
+				first: firstName.value,
+				last: lastName.value
 
 
 
             }//end of person object
-
+			
 
 
 
 			//Add the person object into the people array by using the .push() array method.
+			peopleEntered.push(person)
 			
 
 			//Bubble sort people on the last name
-			for(let i=0; i < people.length-1; i++)
+			for(let i=0; i < peopleEntered.length-1; i++)
 			{
-				for(let j=0; j < people.length-1; j++)
+				for(let j=0; j < peopleEntered.length-1; j++)
 				{
-					if(people[j].last > people[j+1].last)
+					if(peopleEntered[j].last > peopleEntered[j+1].last)
 					{
-						let temp = people[j]
-						people[j] = people[j+1]
-						people[j+1] = temp
+						let temp = peopleEntered[j]
+						peopleEntered[j] = peopleEntered[j+1]
+						peopleEntered[j+1] = temp
 					}
 				}
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
+			console.log(peopleEntered)
 			
 
 			//create a variable called 'output' that has an empty string value stored to 
+			output = ""
 			
 
 			//Loop through the objects in the people array
-			for()
+			//I removed the "-1" so the user will only have to click once for the output to display on the page
+			for(let i=0; i < peopleEntered.length; i++)
             {
 
 				//Loop through each property in the object
-				for(key in people[i])
+				for(key in peopleEntered[i])
                 {
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
+					output += key.toUpperCase() + ": " + peopleEntered[i][key] + "<br>"
+					
 				
 
                 }
+				output += `<hr>`
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
 				
 
@@ -119,7 +131,9 @@
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
+				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
+				document.getElementById("output").innerHTML = output
 				
 
 
