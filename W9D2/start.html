@@ -8,11 +8,12 @@
 
     <style>
         .red {
-            border: 1px solid red
-            margin-bottom: 10px
-            min-height: 20px
+            border: 1px solid red;
+            margin-bottom: 10px;
+            min-height: 20px;
         }
     </style>
+    
 </head>
 <body>
 
@@ -56,65 +57,32 @@
         console.log(people[0]) 
         console.dir(people[0]) 
 
-
         // Select the main element of the document to be able to add content later
-        var body = document.querySelector('body')
-        console.log(body) //see he actual HTML element and its childen (contents)
-        console.dir(body) //see the properties of the element object
+        var body = document.querySelector('body');
+        console.log(body); // See the actual HTML element and its children (contents)
+        console.dir(body); // See the properties of the element object
 
-        //body.innerHTML += `<div><p>${people[0].first}</p></div>`
-
+        // Loop through the array and create a div for each person
         for(let i = 0; i < people.length; i++) {
             
-            //for every object stored to the array, add a div to the body element to hold the object's info (values)
-            
-            //create the element - thsi step alone does not write it to the page
-            var tempDiv = document.createElement(`div`)
+            // Create the div element to hold the person's info
+            var tempDiv = document.createElement('div');
 
-            //add the tempDiv back to the body element
-            body.append(tempDiv)
+            // Add an ID and class attribute to the new div element
+            tempDiv.setAttribute('id', `${i} - ${people[i].first}`);
+            tempDiv.setAttribute('class', 'red');
 
-            //add an ID and class attribute to the new div element 
-            //.setAttribute() adds attrubutes to elements; provide with attribute type and attribute value
-            tempDiv.setAttribute(`id`, `${i} - ${people[i].first}`)
-            tempDiv.setAttribute(`class`, `red`)
-
-            //for every property of the object-->  for key in object loop
-            for (key in people[i]) { //for each key (property) in the current object
-                
-                //create the element to hold the property value
-                var p = document.createElement(`p`)
-
-                //create the text node to add to the paragraph tag
-                var text = document.createTextNode(people[i][key])
-
-                //add text (append) to the paragraph element
-                p.appendChild(text)
-
-                //add the paragraph (append) element to the div 
-                tempDiv.appendChild(p)
-
-
-
-
-
+            // For each key in the current object (person), create a paragraph
+            for (key in people[i]) {
+                var p = document.createElement('p');
+                var text = document.createTextNode(people[i][key]);  // Create text node with the value of the property
+                p.appendChild(text);  // Append the text node to the paragraph
+                tempDiv.appendChild(p);  // Append the paragraph to the div
             }
 
-
+            // Append the div to the body
+            body.appendChild(tempDiv);
         }
-        
-        
-        
-
-
-
-
-
-
-
-
-
-
     </script>
     
 </body>
