@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W9 | Demo</title>
+
+    <style>
+        .red {
+            border: 1px solid red
+            margin-bottom: 10px
+            min-height: 20px
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Week 9 Demo & Creating Elements in JS</h1>
+    <h3><i>Using the .createElement() & .appendChild() methods</i></h3>
+
+    <script>
+        /* WEEK 9 JAVASCRIPT NOTES!
+
+        console.dir() --- Selecting with this shows the element in the console as an object. This is helpful to see children/parent/node information and array index placement.
+        .querySelector() --- Selects an element within the HTML, needs to be supplied a valid selector (id, class, element type).
+        .children[] --- Gives access to a child element (element inside the object element); need to include index # in the [].
+        .parentElement --- Gives access to the parent or containing element; similar to ../ in terminal file paths.
+        .setAttribute() --- Creates a new attribute and applies it to the element preceding the . Needs to be supplied an attribute type and value for said attribute.
+        .createElement() --- Creates an HTML element; needs to be supplied the element/tag type. Requires appendChild() as a second step.
+        .createTextNode() --- Creates a text node (text content) so it can be applied to elements.
+            * Needs to be supplied with text content / string values.
+            * Requires appendChild() before it will be added to the page.
+        .appendChild() --- Adds an element or text node inside of a pre-existing element (container/parent); this allows for the element/node to be added to the HTML (aka appear on page).
+        */
+
+        var people = [
+            {
+                first: "Daenerys", 
+                last: "Targaryen", 
+                credit: "Queen of Meereen, Khaleesi of the Great Grass Sea, Mother of Dragons, The Unburnt, Breaker of Chains, Queen of the Andals, Protector of the Seven Kingdoms, Lady of Dragonstone"
+            },
+            {
+                first: "Cersei", 
+                last: "Lannister", 
+                credit: "Protector of the Realm, Lady Paramount of the Westerlands, Lady of Casterly Rock, Light of the West, Queen Dowager, Queen Regent"
+            },
+            {
+                first: "Yara", 
+                last: "Greyjoy", 
+                credit: "Queen of the Iron Islands and Lady Reaper of Pyke"
+            }
+        ]
+
+        // Display Daenerys' info to console
+        console.log(people[0]) 
+        console.dir(people[0]) 
+
+
+        // Select the main element of the document to be able to add content later
+        var body = document.querySelector('body')
+        console.log(body) //see he actual HTML element and its childen (contents)
+        console.dir(body) //see the properties of the element object
+
+        //body.innerHTML += `<div><p>${people[0].first}</p></div>`
+
+        for(let i = 0; i < people.length; i++) {
+            
+            //for every object stored to the array, add a div to the body element to hold the object's info (values)
+            
+            //create the element - thsi step alone does not write it to the page
+            var tempDiv = document.createElement(`div`)
+
+            //add the tempDiv back to the body element
+            body.append(tempDiv)
+
+            //add an ID and class attribute to the new div element 
+            //.setAttribute() adds attrubutes to elements; provide with attribute type and attribute value
+            tempDiv.setAttribute(`id`, `${i} - ${people[i].first}`)
+            tempDiv.setAttribute(`class`, `red`)
+
+            //for every property of the object-->  for key in object loop
+            for (key in people[i]) { //for each key (property) in the current object
+                
+                //create the element to hold the property value
+                var p = document.createElement(`p`)
+
+                //create the text node to add to the paragraph tag
+                var text = document.createTextNode(people[i][key])
+
+                //add text (append) to the paragraph element
+                p.appendChild(text)
+
+                //add the paragraph (append) element to the div 
+                tempDiv.appendChild(p)
+
+
+
+
+
+            }
+
+
+        }
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
